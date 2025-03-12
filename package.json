@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
+  "module": "ESNext",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node ./core/app.ts"
+    "start": "ts-node ./core/app.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +16,11 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "firebase": "^11.4.0",
-    "firebase-admin": "^13.2.0"
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.3.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

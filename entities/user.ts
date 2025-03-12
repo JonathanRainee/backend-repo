@@ -5,3 +5,10 @@ export interface User{
     gender: 'male' | 'female' | 'other';
     password: string;
 }
+
+export interface UserData {
+    email: string;
+    password: string;
+    age: number;
+    name: string;
+  }

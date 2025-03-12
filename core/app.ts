@@ -1,13 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser'; 
 import cors from "cors";
-import router from 'routes/userRoutes';
+import router from '../routes/userRoutes.js';
+import dotenv from "dotenv";
 
-const app = express()
-const port = 2323
+const app = express();
+const port = 2323;
+dotenv.config();
 
 const corsOption = { 
-  origin: ["http://localhost:3001"], 
+  origin: [`http://localhost:${process.env.FRONTEND_PORT1}`, `http://localhost:${process.env.FRONTEND_PORT2}`], 
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Authorization", "Content-Type"] 
 }
@@ -22,3 +24,5 @@ app.use('/api/users', router);
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+export default app;
