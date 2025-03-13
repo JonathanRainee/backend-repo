@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import serviceAccount from "./serviceAccountKey.json" assert { type: "json" };
-
+;
 import admin from 'firebase-admin';
 const firebaseConfig = {
     apiKey: "AIzaSyAWNKJMQI8JfQM_L8bk1aRoSMRuUexDP9g",
