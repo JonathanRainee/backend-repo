@@ -1,20 +1,6 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * import {onCall} from "firebase-functions/v2/https";
- * import {onDocumentWritten} from "firebase-functions/v2/firestore";
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
-
 import {onRequest} from "firebase-functions/v2/https";
 import * as logger from "firebase-functions/logger";
-// import * as functions from 'firebase-functions';
 import app from '../../core/app.js'
-// import app from '../../dist/core/app.js';
-
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
 
 export const helloWorld = onRequest((request, response) => {
   logger.info("Hello logs!", {structuredData: true});
@@ -22,10 +8,8 @@ export const helloWorld = onRequest((request, response) => {
 });
 
 export const heloo = onRequest((request, response) => {
-    logger.info("heloo logs!", {structuredData: true});
-    response.send("Hello!");
-  });
-
-// export const api = functions.https.onRequest(app);
+  logger.info("heloo logs!", {structuredData: true});
+  response.send("Hello!");
+});
 
 export const api = onRequest(app);
